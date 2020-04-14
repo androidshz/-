@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>管理员登录页面</title>
+  <link rel="stylesheet" href="./layui/css/layui.css">
+  <!--自定义的css应该在框架的css之后-->
+  <link rel="stylesheet" type="text/css" href="./css/common.css"/>
+</head>
+<body>
+ <div class="my">
+<form class="layui-form  myform" action="">
+  <div class="layui-form-item">
+    <label class="layui-form-label">账号</label>
+    <div class="layui-input-inline">
+      <input type="text" name="username" required lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux H">*必填</div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">密码</label>
+    <div class="layui-input-inline">
+      <input type="password" name="passwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-word-aux H">*必填</div>
+  </div>
+  
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="login">立即提交</button>
+    </div>
+  </div>
+</form>
+ </div>
+<script src="./layui/layui.all.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
+</body>
+</html>

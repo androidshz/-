@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <!--自定义的css应该在框架的css之后-->
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header"></div>
+        <div class="layui-side layui-bg-black"></div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">
+                <span class="layui-breadcrumb">
+                    <a href="./index.html">首页</a>
+                    <a href="./course.html">课程管理</a>
+                    <a><cite>课程列表</cite></a>
+                </span>
+                <hr>
+                <table id="courselist" lay-filter="courselist"></table>
+            </div>
+        </div>
+        <div class="layui-footer">
+            ©10101010 - H519101-版权所有
+        </div>
+    </div>
+    <script src="./layui/layui.all.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <script src="./js/login.js"></script>
+
+    <script type="text/html" id="coursecover">
+        <a href="{{d.cover}}" target="_blank"><img src="{{d.cover}}"></a>
+    </script>
+
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" href="./editcourse.html?cid={{d.cid}}">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+
+</body>
+
+</html>
